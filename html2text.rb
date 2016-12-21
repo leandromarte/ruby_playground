@@ -2,7 +2,7 @@ require 'html2text'
 require 'nokogiri'
 require 'open-uri'
 
-doc = Nokogiri::HTML(open("http://www.veja.com.br"), nil, 'UTF-8')
+doc = Nokogiri::HTML(open(ARGV[0]), nil, 'UTF-8')
 puts doc.to_s.encoding
 #puts doc
 
